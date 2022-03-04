@@ -7,11 +7,7 @@ module.exports = function check(str, bracketsConfig) {
   for (let i = 0; i < bracketsConfig.length; i++) {
     openBr.push(bracketsConfig[i][0]);
     closeBr.push(bracketsConfig[i][1]);
-    if (bracketsConfig[i][0] === bracketsConfig[i][1]) {
-      matchBr.push(true);
-    } else {
-      matchBr.push(false);
-    }
+    matchBr.push(bracketsConfig[i][0] === bracketsConfig[i][1]);
   }
 
   for (let i = 0; i < str.length; i++) {
